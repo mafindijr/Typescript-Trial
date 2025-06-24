@@ -18,7 +18,7 @@ type Person = {
     }
 }
 
-//custom type ready to be use
+//custom type ready to be use/ Nested Object Types
 
 let person1: Person = {
 
@@ -44,5 +44,4 @@ let person2: Person = {
     }
 }
 
-//Nested Object Types
 
