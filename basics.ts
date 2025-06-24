@@ -13,16 +13,18 @@ type person = {
     isStudent: boolean;
 }
 
-let person = {
+//custom type ready to be use
+
+let person1: person = {
 
     name: "joe",
     age: 42,
     isStudent: true
 }
 
-let person2 = {
+let person2: person = {
 
     name: "jill",
     age: 66,
-    isstudent: false
+    isStudent: false
 }
