@@ -1,3 +1,8 @@
+type Pizza = {
+    name: string;
+    price: number;
+}
+
 const menu = [
      {name: "Margheruta", price: 8},
      {name: "Pepperoni", price: 10 },
@@ -10,7 +15,7 @@ const menu = [
  let nextOrderId: number = 1;
  const orderQueue = [];
 
-function addNewPizza (pizzaObj) {
+function addNewPizza (pizzaObj: Pizza) {
 
     menu.push(pizzaObj);
 }
@@ -37,9 +42,9 @@ function completeOrder(orderId: number) {
 
 } 
 
-addNewPizza({ name: "Chicken Bacon ranch", cost: 12 });
-addNewPizza({ name: "BBQ Chicken", cost: 12 });
-addNewPizza({ name: "Spicy Sausage", cost: 11 });
+addNewPizza({ name: "Chicken Bacon ranch", price: 12 });
+addNewPizza({ name: "BBQ Chicken", price: 12 });
+addNewPizza({ name: "Spicy Sausage", price: 11 });
 
 placeOrder("Chicken Bacon Ranch");
 completeOrder(1);
