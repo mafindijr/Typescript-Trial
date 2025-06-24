@@ -7,24 +7,42 @@ let isStudent: boolean = true;
 
 //custom types
 
-type person = {
+type Person = {
     name: string;
     age: number;
     isStudent: boolean;
+    address: {
+        street: string;
+        city: string;
+        country: string;
+    }
 }
 
 //custom type ready to be use
 
-let person1: person = {
+let person1: Person = {
 
     name: "joe",
     age: 42,
-    isStudent: true
+    isStudent: true,
+    address: {
+        street: "123 Palace way",
+        city: "Jalingo",
+        country: "Nigeria"
+    }
 }
 
-let person2: person = {
+let person2: Person = {
 
     name: "jill",
     age: 66,
-    isStudent: false
+    isStudent: false,
+    address: {
+        street: "23 lamurde",
+        city: "jalingo",
+        country: "Nigeria"
+    }
 }
+
+//Nested Object Types
+
