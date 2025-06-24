@@ -7,15 +7,22 @@ let isStudent: boolean = true;
 
 //custom types
 
+type Address = {
+    street: string;
+    city: string;
+    country: string;
+}
+
 type Person = {
     name: string;
     age: number;
     isStudent: boolean;
-    address: {
-        street: string;
-        city: string;
-        country: string;
-    }
+    address: Address;
+    // address: {
+    //     street: string;
+    //     city: string;
+    //     country: string;
+    // }
 }
 
 //custom type ready to be use/ Nested Object Types
@@ -32,7 +39,7 @@ let person1: Person = {
     }
 }
 
-let person2: Person = {
+let person2: Person , Address = {
 
     name: "jill",
     age: 66,
