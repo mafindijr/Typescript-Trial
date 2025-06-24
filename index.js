@@ -10,7 +10,7 @@ const cashInRegister = 100;
 const nextOrderId = 1;
 const orderQueue = [];
 
-function addPizza (pizzaObj) {
+function addNewPizza (pizzaObj) {
 
     menu.push(pizzaObj);
 }
