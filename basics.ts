@@ -54,7 +54,7 @@ let person2: Person = {
 // }
 //this will not work but this will
 
-function displayInfor(person) {
+function displayInfor(person: Person ) {
     console.log(`${person.name} lives at ${person.address?.street}`);
 }
 

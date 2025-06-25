@@ -21,7 +21,7 @@ const menu = [
 
  let cashInRegister: number = 100;
  let nextOrderId: number = 1;
- const orderQueue: Order[] = [];
+ const orderHistory: Order[] = [];
 
 function addNewPizza (pizzaObj: Pizza) {
 
@@ -37,14 +37,14 @@ function placeOrder (pizzaName: string) {
     }
     cashInRegister += selectedPizza.price;
     const newOder = { id: nextOrderId++, pizza: selectedPizza, status: "ordered" }
-    orderQueue.push(newOder);
+    orderHistory.push(newOder);
 
     return newOder;
 }
 
 function completeOrder(orderId: number) {
 
-        const order = orderQueue.find(order => order.id === orderId);
+        const order = orderHistory.find(order => order.id === orderId);
         if(!order) {
             console.error(`ths ${order} is not available`);
             // throw new Error(`Order with ID ${orderId} not found`);
@@ -65,4 +65,4 @@ completeOrder(1);
 
 console.log("Menu", menu);
 console.log("Cash in register", cashInRegister);
-console.log("order Queue", orderQueue);
+console.log("order Queue", orderHistory);
