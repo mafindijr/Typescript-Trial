@@ -34,7 +34,7 @@ let person1: Person = {
     isStudent: true,
 }
 
-let person2: Person , Address = {
+let person2: Person = {
 
     name: "jill",
     age: 66,
@@ -59,3 +59,15 @@ function displayInfor(person) {
 }
 
 console.log(displayInfor(person1));
+
+// Types in array
+
+//primitive type
+let ages: number[] = [100, 104, 108];
+
+// using the custom type
+
+let People: Person[] = [person1, person2];
+
+// you also used this Array<Person> istead of Person[] it works too for array datatypes
+
