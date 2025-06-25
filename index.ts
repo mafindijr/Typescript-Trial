@@ -1,6 +1,14 @@
+//custom types initialization
+
 type Pizza = {
     name: string;
     price: number;
+}
+
+type Order = {
+        id: number;
+        pizza: Pizza;
+        status: string;
 }
 
 const menu = [
