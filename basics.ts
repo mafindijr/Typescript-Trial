@@ -17,7 +17,7 @@ type Person = {
     name: string;
     age: number;
     isStudent: boolean;
-    address: Address;
+    address?: Address;
     // address: {
     //     street: string;
     //     city: string;
@@ -32,11 +32,6 @@ let person1: Person = {
     name: "joe",
     age: 42,
     isStudent: true,
-    address: {
-        street: "123 Palace way",
-        city: "Jalingo",
-        country: "Nigeria"
-    }
 }
 
 let person2: Person , Address = {
@@ -50,5 +45,8 @@ let person2: Person , Address = {
         country: "Nigeria"
     }
 }
+
+
+console.log();
 
 
