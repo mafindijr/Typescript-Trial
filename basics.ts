@@ -47,6 +47,15 @@ let person2: Person , Address = {
 }
 
 
-console.log();
+// using the ? to make your type optional will reduce your type safety for example
 
+// function displayInfor(person) {
+//     console.log(`${person.name} lives at ${person.address.street}`);
+// }
+//this will not work but this will
 
+function displayInfor(person) {
+    console.log(`${person.name} lives at ${person.address?.street}`);
+}
+
+console.log(displayInfor(person1));
