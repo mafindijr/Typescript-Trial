@@ -1,6 +1,8 @@
 //custom types initialization
 
 type Pizza = {
+    // adding ids to menu array
+    id: number;
     name: string;
     price: number;
 }
@@ -11,11 +13,11 @@ type Order = {
         status: "ordered" | "completed";
 }
 
-const menu = [
-     {name: "Margheruta", price: 8},
-     {name: "Pepperoni", price: 10 },
-     {name: "Hawaiian", price: 10 },
-     {name: "Veggie", price: 9 }
+const menu: Pizza[] = [
+     { id: 1, name: "Margheruta", price: 8},
+     { id: 2, name: "Pepperoni", price: 10 },
+     { id: 3, name: "Hawaiian", price: 10 },
+     { id: 4, name: "Veggie", price: 9 }
 ];
 
 
