@@ -8,7 +8,7 @@ type Pizza = {
 type Order = {
         id: number;
         pizza: Pizza;
-        status: string;
+        status: "ordered" | "completed";
 }
 
 const menu = [
@@ -36,7 +36,7 @@ function placeOrder (pizzaName: string) {
         return
     }
     cashInRegister += selectedPizza.price;
-    const newOder = { id: nextOrderId++, pizza: selectedPizza, status: "ordered" }
+    const newOder: Order = { id: nextOrderId++, pizza: selectedPizza, status: "ordd" }
     orderHistory.push(newOder);
 
     return newOder;
