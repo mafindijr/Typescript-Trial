@@ -63,9 +63,9 @@ function completeOrder(orderId: number) {
 
 function getPizzaDetails (identifier: string | number) {
 
-    if(identifier === String) {
-        menu.find(identifier);
-    } else if(identifier === )
+    if(typeof identifier === "string"){
+        return menu.find(pizza => pizza.name === identifier);
+    }
 
 }
 
