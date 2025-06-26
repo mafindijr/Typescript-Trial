@@ -104,3 +104,14 @@ const users: User2[] = [
 
 
 ];
+
+
+function fetchUserDetails (userName: string)/*not neccessary but neccessary to include the fuction type */: User2 {
+
+    const user = users.find(user => user.userName === userName);
+    if(!user) {
+        throw new Error(`User with username ${userName} not found`);
+    }
+
+    return user;
+}
