@@ -83,6 +83,24 @@ type User = {
     role: "guest" | "member" | "admin";
 }
 
-type UserRole = "guest" | "member" | "admin";
+type UserRole1 = "guest" | "member" | "admin";
 
-let userRole: UserRole = "member";
+let userRole: UserRole1 = "member";
+
+// Function return types
+
+type UserRole = "guest" | "admin" | "member";
+
+type User2 = {
+    userName: string;
+    role: UserRole;
+}
+
+const users: User2[] = [
+
+    {userName: "abdulrazak mafindi", role: "admin"},
+    {userName: "dhas senior", role: "guest"},
+    {userName: "mafindi jr", role: "member"}
+
+
+];
