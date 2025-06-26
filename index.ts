@@ -38,7 +38,7 @@ function placeOrder (pizzaName: string) {
         return
     }
     cashInRegister += selectedPizza.price;
-    const newOder: Order = { id: nextOrderId++, pizza: selectedPizza, status: "ordd" }
+    const newOder: Order = { id: nextOrderId++, pizza: selectedPizza, status: "ordered" }
     orderHistory.push(newOder);
 
     return newOder;
@@ -58,9 +58,9 @@ function completeOrder(orderId: number) {
 
 } 
 
-addNewPizza({ name: "Chicken Bacon ranch", price: 12 });
-addNewPizza({ name: "BBQ Chicken", price: 12 });
-addNewPizza({ name: "Spicy Sausage", price: 11 });
+addNewPizza({ id: 5, name: "Chicken Bacon ranch", price: 12 });
+addNewPizza({ id: 6, name: "BBQ Chicken", price: 12 });
+addNewPizza({ id: 7, name: "Spicy Sausage", price: 11 });
 
 placeOrder("Chicken Bacon Ranch");
 completeOrder(1);
