@@ -73,7 +73,7 @@ let People: Person[] = [person1, person2];
 
 let myName1: "Abdul" = "Abdul";
 
-const myName2: "Abdul" = "Abdul1";
+const myName2: "Abdul" = "Abdulsss";
 
 
 // Union 
