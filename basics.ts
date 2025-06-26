@@ -84,3 +84,5 @@ type User = {
 }
 
 type UserRole = "guest" | "member" | "admin";
+
+let userRole: UserRole = "member";
