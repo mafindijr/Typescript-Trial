@@ -13,6 +13,8 @@ type Order = {
         status: "ordered" | "completed";
 }
 
+//type Identifier = string | number;
+
 const menu: Pizza[] = [
      { id: 1, name: "Margheruta", price: 8},
      { id: 2, name: "Pepperoni", price: 10 },
@@ -57,6 +59,15 @@ function completeOrder(orderId: number) {
         return order;
 
 } 
+
+
+function getPizzaDetails (identifier: string | number) {
+
+    if(identifier === String) {
+        menu.find(identifier);
+    } else if(identifier === )
+
+}
 
 addNewPizza({ id: 5, name: "Chicken Bacon ranch", price: 12 });
 addNewPizza({ id: 6, name: "BBQ Chicken", price: 12 });
