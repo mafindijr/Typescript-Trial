@@ -71,3 +71,16 @@ let People: Person[] = [person1, person2];
 
 // you also used this Array<Person> istead of Person[] it works too for array datatypes
 
+let myName1: "Abdul" = "Abdul";
+
+const myName2: "Abdul" = "Abdul1";
+
+
+// Union 
+
+type User = {
+    userName: string;
+    role: "guest" | "member" | "admin";
+}
+
+type UserRole = "guest" | "member" | "admin";
