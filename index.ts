@@ -64,7 +64,7 @@ function completeOrder(orderId: number) {
 function getPizzaDetails (identifier: string | number) {
 
     if(typeof identifier === "string"){
-        return menu.find(pizza => pizza.name === identifier);
+        return menu.find(pizza => pizza.name.toLocaleLowerCase() === identifier.toLocaleLowerCase());
     }
 
 }
