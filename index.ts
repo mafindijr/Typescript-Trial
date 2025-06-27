@@ -46,7 +46,7 @@ function placeOrder (pizzaName: string) {
     return newOder;
 }
 
-function completeOrder(orderId: number) {
+function completeOrder(orderId: number): Order | undefined {
 
         const order = orderHistory.find(order => order.id === orderId);
         if(!order) {
