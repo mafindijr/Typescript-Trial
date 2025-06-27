@@ -115,3 +115,9 @@ function fetchUserDetails (userName: string)/*not neccessary but neccessary to i
 
     return user;
 }
+
+
+// Type Any
+// Note never use type any
+
+let value: any = 1;
