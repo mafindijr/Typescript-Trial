@@ -27,7 +27,7 @@ const menu: Pizza[] = [
  let nextOrderId: number = 1;
  const orderHistory: Order[] = [];
 
-function addNewPizza (pizzaObj: Pizza) {
+function addNewPizza (pizzaObj: Pizza): void {
 
     menu.push(pizzaObj);
 }
