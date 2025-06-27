@@ -71,7 +71,6 @@ function getPizzaDetails (identifier: string | number): Pizza {
         throw TypeError("parameter 'identifier' must be ether a string or a number ");
     }
 
-    return identifier;
 }
 
 addNewPizza({ id: 5, name: "Chicken Bacon ranch", price: 12 });
