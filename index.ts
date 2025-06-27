@@ -61,7 +61,7 @@ function completeOrder(orderId: number) {
 } 
 
 
-function getPizzaDetails (identifier: string | number) {
+function getPizzaDetails (identifier: string | number): Pizza {
 
     if(typeof identifier === "string"){
         return menu.find(pizza => pizza.name.toLocaleLowerCase() === identifier.toLocaleLowerCase());
@@ -71,6 +71,7 @@ function getPizzaDetails (identifier: string | number) {
         throw TypeError("parameter 'identifier' must be ether a string or a number ");
     }
 
+    return identifier;
 }
 
 addNewPizza({ id: 5, name: "Chicken Bacon ranch", price: 12 });
