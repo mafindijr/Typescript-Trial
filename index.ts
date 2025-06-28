@@ -15,17 +15,18 @@ type Order = {
 
 //type Identifier = string | number;
 
+ let cashInRegister: number = 100;
+ let nextOrderId: number = 1;
+ let nextPizzaId = 1;
+ const orderHistory: Order[] = [];
+
 const menu: Pizza[] = [
-     { id: 1, name: "Margheruta", price: 8},
+     { id: nextPizzaId++, name: "Margheruta", price: 8},
      { id: 2, name: "Pepperoni", price: 10 },
      { id: 3, name: "Hawaiian", price: 10 },
      { id: 4, name: "Veggie", price: 9 }
 ];
 
-
- let cashInRegister: number = 100;
- let nextOrderId: number = 1;
- const orderHistory: Order[] = [];
 
 function addNewPizza (pizzaObj: Pizza): void {
 
