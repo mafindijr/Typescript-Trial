@@ -22,9 +22,9 @@ type Order = {
 
 const menu: Pizza[] = [
      { id: nextPizzaId++, name: "Margheruta", price: 8},
-     { id: 2, name: "Pepperoni", price: 10 },
-     { id: 3, name: "Hawaiian", price: 10 },
-     { id: 4, name: "Veggie", price: 9 }
+     { id: nextPizzaId++, name: "Pepperoni", price: 10 },
+     { id: nextPizzaId++, name: "Hawaiian", price: 10 },
+     { id: nextPizzaId++, name: "Veggie", price: 9 }
 ];
 
 
@@ -74,9 +74,9 @@ function getPizzaDetails (identifier: string | number): Pizza | undefined {
 
 }
 
-addNewPizza({ id: 5, name: "Chicken Bacon ranch", price: 12 });
-addNewPizza({ id: 6, name: "BBQ Chicken", price: 12 });
-addNewPizza({ id: 7, name: "Spicy Sausage", price: 11 });
+addNewPizza({ id: nextPizzaId++, name: "Chicken Bacon ranch", price: 12 });
+addNewPizza({ id: nextPizzaId++, name: "BBQ Chicken", price: 12 });
+addNewPizza({ id: nextPizzaId++, name: "Spicy Sausage", price: 11 });
 
 placeOrder("Chicken Bacon Ranch");
 completeOrder(1);
