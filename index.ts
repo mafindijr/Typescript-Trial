@@ -17,7 +17,7 @@ type Order = {
 
  let cashInRegister: number = 100;
  let nextOrderId: number = 1;
- let nextPizzaId = 1;
+ let nextPizzaId: number = 1;
  const orderHistory: Order[] = [];
 
 const menu: Pizza[] = [
