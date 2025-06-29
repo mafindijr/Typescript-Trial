@@ -121,3 +121,6 @@ function fetchUserDetails (userName: string)/*not neccessary but neccessary to i
 // Note never use type any
 
 let value: any = 1;
+
+
+//utility Types and Partial
