@@ -124,3 +124,8 @@ let value: any = 1;
 
 
 //utility Types and Partial
+
+function updateUser(id: any, updates: any) {
+    const userId = users.find(id);
+    
+}
