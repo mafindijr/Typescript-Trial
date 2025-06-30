@@ -137,3 +137,7 @@ function updateUser(id: number, updates: any) {
     Object.assign(foundUser, updates);
 }
 
+updateUser(1, { userName: "new_john_doe" });
+updateUser(4, { role: "contributor" });
+
+console.log(users);
