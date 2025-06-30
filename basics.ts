@@ -89,18 +89,20 @@ let userRole: UserRole1 = "member";
 
 // Function return types
 
-type UserRole = "guest" | "admin" | "member";
+type UserRole = "guest" | "admin" | "member" | "contributor";
 
 type User2 = {
+    id: number
     userName: string;
     role: UserRole;
 }
 
 const users: User2[] = [
 
-    {userName: "abdulrazak mafindi", role: "admin"},
-    {userName: "dhas senior", role: "guest"},
-    {userName: "mafindi jr", role: "member"}
+    {id: 1, userName: "abdulrazak mafindi", role: "admin"},
+    {id: 2, userName: "dhas senior", role: "contributor"},
+    {id: 3, userName: "mafindi jr", role: "member"},
+    {id: 4, userName: "mafindi jr", role: "guest"}
 
 
 ];
