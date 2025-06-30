@@ -125,7 +125,7 @@ let value: any = 1;
 
 //utility Types and Partial
 
-function updateUser(id: any, updates: any) {
+function updateUser(id: number, updates: any) {
     const userId = users.find(id);
     Object.assign
 }
