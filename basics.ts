@@ -127,7 +127,14 @@ let value: any = 1;
 
 //utility Types and Partial
 
-function updateUser(id: number, updates: any) {
+type UpadtedUser = {
+
+    id?: number;
+    userName?: string;
+    role?: UserRole;
+}
+
+function updateUser(id: number, updates: UpadtedUser) {
     //find the user in the array by the id
     const foundUser = users.find(user => user.id === id);
     if(!foundUser) {
