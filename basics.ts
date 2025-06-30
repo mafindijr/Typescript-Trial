@@ -127,5 +127,5 @@ let value: any = 1;
 
 function updateUser(id: any, updates: any) {
     const userId = users.find(id);
-    
+    Object.assign
 }
