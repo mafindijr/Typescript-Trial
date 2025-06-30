@@ -126,6 +126,14 @@ let value: any = 1;
 //utility Types and Partial
 
 function updateUser(id: number, updates: any) {
-    const userId = users.find(id);
-    Object.assign
+    //find the user in the array by the id
+    const foundUser = users.find(user => user.id === id);
+    if(!foundUser) {
+        console.error("User not found!");
+        return
+    }
+
+    // Use object.assign to update the found user in place
+    Object.assign(foundUser, updates);
 }
+
