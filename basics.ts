@@ -97,12 +97,14 @@ type User2 = {
     role: UserRole;
 }
 
+let nextUserId = 1;
+
 const users: User2[] = [
 
-    {id: 1, userName: "abdulrazak mafindi", role: "admin"},
-    {id: 2, userName: "dhas senior", role: "contributor"},
-    {id: 3, userName: "mafindi jr", role: "member"},
-    {id: 4, userName: "mafindi jr", role: "guest"}
+    {id: nextUserId++, userName: "abdulrazak mafindi", role: "admin"},
+    {id: nextUserId++, userName: "dhas senior", role: "contributor"},
+    {id: nextUserId++, userName: "mafindi jr", role: "member"},
+    {id: nextUserId++, userName: "mafindi jr", role: "guest"}
 
 
 ];
@@ -151,7 +153,27 @@ function updateUser(id: number, updates: UpadtedUser) {
     Object.assign(foundUser, updates);
 }
 
-updateUser(1, { userName: "new_john_doe" });
-updateUser(4, { role: "contributor" });
+// updateUser(1, { userName: "new_john_doe" });
+// updateUser(4, { role: "contributor" });
+
+
+// omit utility type
+
+function addNewUser(newUser: any): User2 {
+
+    const user: User2 = {
+        id: nextUserId++,
+        ...newUser
+    };
+    users.push(user);
+
+    return user;
+
+
+}
+
+//Example Usage
+
+addNewUser({ userName: "John_doe", role: "member" });
 
 console.log(users);
