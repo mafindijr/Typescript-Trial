@@ -127,12 +127,17 @@ let value: any = 1;
 
 //utility Types and Partial
 
-type UpadtedUser = {
+// type UpadtedUser = {
 
-    id?: number;
-    userName?: string;
-    role?: UserRole;
-}
+//     id?: number;
+//     userName?: string;
+//     role?: UserRole;
+// }
+
+//instead of the above code we can use Partial Type eg.
+
+type UpadtedUser = Partial<User2>;
+// this copy ther user2 type and make all the types optional
 
 function updateUser(id: number, updates: UpadtedUser) {
     //find the user in the array by the id
