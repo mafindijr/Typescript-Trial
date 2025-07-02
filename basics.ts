@@ -159,7 +159,7 @@ function updateUser(id: number, updates: UpadtedUser) {
 
 // omit utility type
 
-function addNewUser(newUser: any): User2 {
+function addNewUser(newUser: Omit<User2, "id">): User2 {
 
     const user: User2 = {
         id: nextUserId++,
