@@ -27,7 +27,7 @@ const menu: Pizza[] = [
      { id: nextPizzaId++, name: "Veggie", price: 9 }
 ];
 
-const orderQueue: Order[] = [];
+// const orderQueue: Order[] = [];
 
 
 function addNewPizza (pizzaObj: Omit<Pizza, "id">): Pizza {
@@ -55,15 +55,16 @@ function placeOrder (pizzaName: string): Order | undefined {
     return newOder;
 }
 
-function addToArray<T>(array: T[], item: T): T[] {
-    array.push(item);
-    return array;
-}
+//using generics types
+// function addToArray<T>(array: T[], item: T): T[] {
+//     array.push(item);
+//     return array;
+// }
 
-addToArray(menu, {id: nextPizzaId++, name: "Chicken Bacon Ranch", price: 12});
-addToArray<Order>(orderQueue, { id: nextOrderId++, pizza: menu[2], status: "completed" });
-console.log(menu);
-console.log(orderQueue);
+// addToArray<Pizza>(menu, {id: nextPizzaId++, name: "Chicken Bacon Ranch", price: 12});
+// addToArray<Order>(orderQueue, { id: nextOrderId++, pizza: menu[2], status: "completed" });
+// console.log(menu);
+// console.log(orderQueue);
 
 function completeOrder(orderId: number): Order | undefined {
 
