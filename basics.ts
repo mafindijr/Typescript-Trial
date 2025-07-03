@@ -187,3 +187,7 @@ const voters = [{ name: "Alice", age: "42" }, { name: "Bob", age: 77 }];
 function getLastItem<PlaceholderType>(array: PlaceholderType[]) {
     return array[array.length - 1]
 }
+
+console.log(getLastItem(gameScore));
+console.log(getLastItem(favoriteThings));
+console.log(getLastItem(voters));
