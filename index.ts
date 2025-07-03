@@ -28,9 +28,15 @@ const menu: Pizza[] = [
 ];
 
 
-function addNewPizza (pizzaObj: Omit<Pizza, "id">): void {
-    pizzaObj.id = nextPizzaId++;
-    menu.push(pizzaObj);
+function addNewPizza (pizzaObj: Omit<Pizza, "id">): Pizza {
+    const newPizza: Pizza = {
+        id: nextPizzaId++,
+        ...pizzaObj
+    }
+    menu.push(newPizza);
+
+    return newPizza;
+    
 }
 
 function placeOrder (pizzaName: string): Order | undefined {
