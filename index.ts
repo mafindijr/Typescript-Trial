@@ -27,6 +27,8 @@ const menu: Pizza[] = [
      { id: nextPizzaId++, name: "Veggie", price: 9 }
 ];
 
+const orderQueue: Order[] = [];
+
 
 function addNewPizza (pizzaObj: Omit<Pizza, "id">): Pizza {
     const newPizza: Pizza = {
@@ -52,6 +54,16 @@ function placeOrder (pizzaName: string): Order | undefined {
 
     return newOder;
 }
+
+function addToArray<T>(array: T[], item: T): T[] {
+    array.push(item);
+    return array;
+}
+
+addToArray(menu, {id: nextPizzaId++, name: "Chicken Bacon Ranch", Price: 12});
+addToArray(orderQueue, { id: nextOrderId++, pizza: menu[2], status: "completed" });
+console.log(menu);
+console.log(orderQueue);
 
 function completeOrder(orderId: number): Order | undefined {
 
@@ -80,9 +92,9 @@ function getPizzaDetails (identifier: string | number): Pizza | undefined {
 
 }
 
-addNewPizza({ name: "Chicken Bacon ranch", price: 12 });
-addNewPizza({ name: "BBQ Chicken", price: 12 });
-addNewPizza({ name: "Spicy Sausage", price: 11 });
+// addNewPizza({ name: "Chicken Bacon ranch", price: 12 });
+// addNewPizza({ name: "BBQ Chicken", price: 12 });
+// addNewPizza({ name: "Spicy Sausage", price: 11 });
 
 placeOrder("Chicken Bacon Ranch");
 completeOrder(1);
