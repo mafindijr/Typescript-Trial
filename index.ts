@@ -28,7 +28,7 @@ const menu: Pizza[] = [
 ];
 
 
-function addNewPizza (pizzaObj: Pizza): void {
+function addNewPizza (pizzaObj: Omit<Pizza, "id">): void {
     pizzaObj.id = nextPizzaId++;
     menu.push(pizzaObj);
 }
